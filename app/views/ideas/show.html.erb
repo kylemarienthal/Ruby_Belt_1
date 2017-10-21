@@ -1,0 +1,17 @@
+<h2><a href="user_path <%= @idea.user.id %>"><%= @idea.user.name %></a> says: <%= @idea.content %></h2>
+
+<div>
+	<h3> People who liked this idea </h3>
+	<table>
+		<th>Alias</th>
+		<th>Name </th>
+	<% if @idea.users_liked.count > 0 %>
+		<% @idea.users_liked.uniq.each do |x| %>
+		<tr>
+			<td><a href="/users/<%= x.id %>"><%= x.alias %></a></td>
+			<td><%= x.name %></td>
+		</tr>
+    <% end %>
+  <% end %>
+	</table>
+</div>

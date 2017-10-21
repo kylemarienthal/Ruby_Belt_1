@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-12">
+    <h4>Register</h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <form class="" action= "<%= register_path %>" method="post">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <!-- name -->
+      <div class="form-group">
+        <input type="text" name="user[name]"class="form-control" id="first_name" placeholder="Enter name">
+      </div>
+      <!-- last name -->
+      <div class="form-group">
+        <input type="text" name="user[alias]"class="form-control" id="last_name" placeholder="Enter Alias">
+      </div>
+      <!-- email -->
+      <div class="form-group">
+        <input type="text" name="user[email]"class="form-control" id="email" placeholder="Enter email">
+      </div>
+      <!-- password -->
+      <div class="form-group">
+        <input type="password" name="user[password]"class="form-control" id="password" placeholder="Enter password">
+      </div>
+      <!-- password_confirmation -->
+      <div class="form-group">
+        <input type="password" name="user[password_confirmation]"class="form-control" id="password_confirmation" placeholder="Password confirmation">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Register</button>
+
+      </div>
+
+    </form>
+  </div>
+  <div class="col-md-2"></div>
+
+</div>
